@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">RunBud: Make Running Friends within your Area</h1>
+<h1 align="center">RunBud: Make Running Friends within your Area [WIP]</h1>
 
 <!-- TABLE OF CONTENTS -->
 
