@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 100%;
+    font-family: sans-serif;
+}
+
+div, section, span, ul, li, a, header{
+    box-sizing: border-box;
+}
+/* Dropdown Button */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+header{
+    background-color:#FDF2E4;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    align-items: center;
+    position: fixed;
+
+    overflow: hidden;
+    list-style: none;
+}
+
+ul li{
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li a{
+    color:black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 14px 16px;
+}
+
+ul li a:hover{
+    background-color: white;
+    color: black;
+}
+
+section{
+    width: 100%;
+    float: left;
+    height: 100vh;
+    position: relative;
+}
+
+#home{
+    background-color: #FDF2E4;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+#home h1{
+    font-size: 20px;
+    text-align: center;
+}
+
+#about{
+    background-color: #FDF2E4;
+}
+#about h1{
+    position: absolute;
+    width: 349px;
+    height: 115px;
+    left: 981px;
+    top: 300;
+    font-size: 46px;
+
+}
+#about p{
+    position: absolute;
+    width: 529px;
+    height: 432px;
+    left: 640px;
+    top: 341px;
+    font-size: 20px;
+}
+#about img{
+    position: absolute;
+    width: 576.3px;
+    height: 342px;
+    left: 45px;
+    top: 225px;
+}
+
+#faq{
+    background-color: #FDF2E4;
+}
+#faq h1{
+    position: absolute;
+    width: 192px;
+    height: 115px;
+    left: 679px;
+    top: 128px;
+    font-size: 50px;
+}
+#faq p{
+    position: absolute;
+    width: 53px;
+    height: 616px;
+    left: 137px;
+    top: 243px;
+    font-size: 20px;
+}
+
+h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: black;
+}
+
+.btn{
+    background-color: #FDF2E4;
+    border: 1px solid black;
+    padding: 10px 30px;
+    color: black;
+    text-decoration: none;  
+    transition: 0.6s ease;
+}
+
+.btn:hover{
+    background: white;
+    color: black;
+}

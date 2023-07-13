@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 100%;
+    font-family: sans-serif;
+}
+
+div, section, span, ul, li, a, header{
+    box-sizing: border-box;
+}
+
+header{
+    background-color:#FDF2E4;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+    overflow: hidden;
+    list-style: none;
+}
+
+ul li{
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li a{
+    color:black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 14px 16px;
+}
+
+ul li a:hover{
+    background-color: white;
+    color: black;
+}
+
+section{
+    width: 100%;
+    float: left;
+    height: 100vh;
+    position: relative;
+}
+
+#home{
+    background-image: url(two-people-running.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+#home h1{
+    font-size: 100px;
+}
+
+#about{
+    background-color: #FDF2E4;
+}
+#about h1{
+    position: absolute;
+    width: 349px;
+    height: 115px;
+    left: 981px;
+    top: 300;
+    font-size: 46px;
+
+}
+#about p{
+    position: absolute;
+    width: 529px;
+    height: 432px;
+    left: 640px;
+    top: 341px;
+    font-size: 20px;
+}
+#about img{
+    position: absolute;
+    width: 576.3px;
+    height: 342px;
+    left: 45px;
+    top: 225px;
+}
+
+#faq{
+    background-color: #FDF2E4;
+}
+#faq h1{
+    position: absolute;
+    width: 192px;
+    height: 115px;
+    left: 679px;
+    top: 128px;
+    font-size: 50px;
+}
+#faq p{
+    position: absolute;
+    width: 53px;
+    height: 616px;
+    left: 137px;
+    top: 243px;
+    font-size: 20px;
+}
+
+#join-now{
+    background-color: #FDF2E4;
+}
+#join-now h1{
+    position: absolute;
+    text-align: center;
+    width: 636px;
+    height: 166px;
+    top: 168px;
+    font-size: 40px;
+}
+
+h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: black;
+}
+
+.buddybutton{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.joining{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    text-align: center;
+
+}
+
+.btn{
+    background-color: #FDF2E4;
+    border: 1px solid black;
+    padding: 10px 30px;
+    color: black;
+    text-decoration: none;  
+    transition: 0.6s ease;
+}
+
+.btn:hover{
+    background: white;
+    color: black;
+}
