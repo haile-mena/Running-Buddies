@@ -1,41 +1,76 @@
-<!-- Please update value in the {}  -->
+# RunBud
 
-<h1 align="center">RunBud: Make Running Friends within your Area [WIP]</h1>
+A full-stack web app that helps runners find, chat, and meet up with other runners in their area.
 
-<!-- TABLE OF CONTENTS -->
+## Stack
 
-## Table of Contents
+- **Backend:** Python, FastAPI, SQLAlchemy, SQLite
+- **Frontend:** React, Vite, Tailwind CSS, React Router
+- **Auth:** bcrypt password hashing, React Context + localStorage session
 
-- [Overview](#overview)
-  - [Built Using](#built-using)
-- [Features](#features)
-- [Contact](#contact)
+## Project Structure
 
-<!-- OVERVIEW -->
+```
+Running-Buddies/
+├── backend/          # FastAPI + SQLite
+│   ├── main.py
+│   ├── database.py
+│   ├── models.py
+│   ├── schemas.py
+│   ├── crud.py
+│   └── requirements.txt
+├── frontend/         # React + Vite
+│   ├── src/
+│   │   ├── components/
+│   │   ├── context/
+│   │   ├── pages/
+│   │   └── api.js
+│   └── package.json
+└── assets/
+    ├── images/       # original image assets
+    └── legacy/       # original static HTML/CSS files
+```
 
-## Overview
+## Setup
 
-![screenshot](https://i.ibb.co/dPNVZrQ/Screenshot-2023-07-13-at-4-55-51-PM.png)
+### Backend
 
-This project is a multi page website that displays a potential social media site for runners to find, chat, and meetup with. The site can be view differently based on whether the viewer was on desktop or mobile. This challenege was a fun way to develop my HTML and CS skills while coming up with a unique website concept. I've learned a lot about different CSS concept, importing media, and creating a responsive webpage using PHP.
+```bash
+cd backend
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
 
-### Built Using
+Runs at `http://localhost:8000`.
 
-<!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
+### Frontend
 
-- [Figma](https://www.figma.com/proto/LBSf0oIKp5juOMNwN2EtYw/ANova-Website-Design?node-id=1-4&starting-point-node-id=1%3A4&mode=design&t=sx5PAfpChLS5Nd05-1)
-- [W3Schools - HTML](https://www.w3schools.com/html/default.asp)
-- [W3Schools - PHP](https://www.w3schools.com/php/default.asp)
-- [freeCodeCamp](https://www.freecodecamp.org/news/tag/css/)
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Runs at `http://localhost:5173`.
 
 ## Features
 
-<!-- List the features of your application or follow the template. Don't share the figma file here :) -->
+- Public landing, About, and FAQ pages
+- User registration and sign-in
+- First-time vs. returning user distinction via `is_new` flag
+- Onboarding placeholder for new users
+- SQLite database for users, matches, and messages
 
-The site contains a description and explanation of the goals and intentions of RunBud which is to create a community of runners and create friendships based of their similarities. The site features and About Page and FAQ, to describe and answer possible questions about the site. Since this was a mock concept, the website only contains place holder text and images. The site also features a sign in and sign up page for any current/potential users to join. The sign in page logs the user in while the sign up page asks the user to provide email, password, and to answer a simple questionnaire to determine similarity with other users. 
+## Notes
+
+- The frontend proxies `/api` requests to the backend during development.
+- If you change the database schema, delete `backend/runbud.db` and restart the backend to recreate the tables.
+- Original static HTML/CSS files are preserved in `assets/legacy/` for reference.
 
 ## Contact
 
-- Linkedn [menahaile](https://www.linkedin.com/in/menahaile/)
+- LinkedIn [menahaile](https://www.linkedin.com/in/menahaile/)
 - GitHub [@haile-mena](https://github.com/haile-mena)
 - Twitter [@menahaile_](https://twitter.com/menahaile_)
