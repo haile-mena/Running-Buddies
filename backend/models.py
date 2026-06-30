@@ -17,6 +17,7 @@ class User(Base):
     terrain = Column(String, default="")        # hills or flat
     surface = Column(String, default="")        # paved or dirt
     intensity = Column(String, default="")      # serious or fun
+    is_new = Column(Boolean, default=True)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
 
     matches_as_user1 = relationship("Match", foreign_keys="Match.user1_id", back_populates="user1")

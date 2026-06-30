@@ -59,6 +59,14 @@ def set_preferences(user_id: int, prefs: schemas.UserPreferences, db: Session = 
     return user
 
 
+@app.post("/api/users/{user_id}/complete-onboarding", response_model=schemas.UserResponse)
+def complete_onboarding(user_id: int, db: Session = Depends(get_db)):
+    user = crud.complete_onboarding(db, user_id)
+    if not user:
+        raise HTTPException(status_code=404, detail="User not found")
+    return user
+
+
 @app.get("/api/users", response_model=list[schemas.UserResponse])
 def list_users(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     return crud.list_users(db, skip=skip, limit=limit)

@@ -13,6 +13,7 @@ class UserBase(BaseModel):
     terrain: Optional[str] = ""
     surface: Optional[str] = ""
     intensity: Optional[str] = ""
+    is_new: Optional[bool] = True
 
 
 class UserCreate(UserBase):

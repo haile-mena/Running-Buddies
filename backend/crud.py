@@ -31,11 +31,22 @@ def create_user(db: Session, user: UserCreate):
         hashed_password=hash_password(user.password),
         first_name=user.first_name,
         last_name=user.last_name,
+        is_new=True,
     )
     db.add(db_user)
     db.commit()
     db.refresh(db_user)
     return db_user
+
+
+def complete_onboarding(db: Session, user_id: int):
+    user = db.query(User).filter(User.id == user_id).first()
+    if not user:
+        return None
+    user.is_new = False
+    db.commit()
+    db.refresh(user)
+    return user
 
 
 def update_user_preferences(db: Session, user_id: int, prefs: UserPreferences):
